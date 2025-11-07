@@ -1,0 +1,204 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|c:\\users\\golfe\\source\\repos\\subastawinforms\\subastawinforms\\repositories\\subastarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|solutionrelative:subastawinforms\\repositories\\subastarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|c:\\users\\golfe\\source\\repos\\subastawinforms\\subastawinforms\\model\\entities\\subasta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|solutionrelative:subastawinforms\\model\\entities\\subasta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|c:\\users\\golfe\\source\\repos\\subastawinforms\\subastawinforms\\controllers\\subastacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|solutionrelative:subastawinforms\\controllers\\subastacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|c:\\users\\golfe\\source\\repos\\subastawinforms\\subastawinforms\\views\\postorview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|solutionrelative:subastawinforms\\views\\postorview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|c:\\users\\golfe\\source\\repos\\subastawinforms\\subastawinforms\\views\\subastadorview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|solutionrelative:subastawinforms\\views\\subastadorview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|c:\\users\\golfe\\source\\repos\\subastawinforms\\subastawinforms\\views\\testview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|solutionrelative:subastawinforms\\views\\testview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|c:\\users\\golfe\\source\\repos\\subastawinforms\\subastawinforms\\model\\entities\\subastador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|solutionrelative:subastawinforms\\model\\entities\\subastador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|c:\\users\\golfe\\source\\repos\\subastawinforms\\subastawinforms\\model\\entities\\postor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|solutionrelative:subastawinforms\\model\\entities\\postor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|c:\\users\\golfe\\source\\repos\\subastawinforms\\subastawinforms\\model\\entities\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|solutionrelative:subastawinforms\\model\\entities\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|c:\\users\\golfe\\source\\repos\\subastawinforms\\subastawinforms\\appcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|solutionrelative:subastawinforms\\appcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\subastawinforms\\views\\testview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{893A68F5-51C9-4CD5-AD93-08C68BD58295}|SubastaWinForms\\SubastaWinForms.csproj|solutionrelative:subastawinforms\\views\\testview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PostorView.cs",
+              "DocumentMoniker": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Views\\PostorView.cs",
+              "RelativeDocumentMoniker": "SubastaWinForms\\Views\\PostorView.cs",
+              "ToolTip": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Views\\PostorView.cs",
+              "RelativeToolTip": "SubastaWinForms\\Views\\PostorView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T22:37:54.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SubastaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Repositories\\SubastaRepository.cs",
+              "RelativeDocumentMoniker": "SubastaWinForms\\Repositories\\SubastaRepository.cs",
+              "ToolTip": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Repositories\\SubastaRepository.cs",
+              "RelativeToolTip": "SubastaWinForms\\Repositories\\SubastaRepository.cs",
+              "ViewState": "AgIAANAAAAAAAAAAAAAwwN4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T22:32:43.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SubastaController.cs",
+              "DocumentMoniker": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Controllers\\SubastaController.cs",
+              "RelativeDocumentMoniker": "SubastaWinForms\\Controllers\\SubastaController.cs",
+              "ToolTip": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Controllers\\SubastaController.cs",
+              "RelativeToolTip": "SubastaWinForms\\Controllers\\SubastaController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAqwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T21:17:49.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SubastadorView.cs",
+              "DocumentMoniker": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Views\\SubastadorView.cs",
+              "RelativeDocumentMoniker": "SubastaWinForms\\Views\\SubastadorView.cs",
+              "ToolTip": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Views\\SubastadorView.cs",
+              "RelativeToolTip": "SubastaWinForms\\Views\\SubastadorView.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAA4wPEAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T21:11:57.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TestView.cs",
+              "DocumentMoniker": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Views\\TestView.cs",
+              "RelativeDocumentMoniker": "SubastaWinForms\\Views\\TestView.cs",
+              "ToolTip": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Views\\TestView.cs",
+              "RelativeToolTip": "SubastaWinForms\\Views\\TestView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T21:00:20.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppContext.cs",
+              "DocumentMoniker": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\AppContext.cs",
+              "RelativeDocumentMoniker": "SubastaWinForms\\AppContext.cs",
+              "ToolTip": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\AppContext.cs",
+              "RelativeToolTip": "SubastaWinForms\\AppContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T21:00:05.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TestView.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Views\\TestView.cs",
+              "RelativeDocumentMoniker": "SubastaWinForms\\Views\\TestView.cs",
+              "ToolTip": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Views\\TestView.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SubastaWinForms\\Views\\TestView.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T21:00:03.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Model\\Entities\\Articulo.cs",
+              "RelativeDocumentMoniker": "SubastaWinForms\\Model\\Entities\\Articulo.cs",
+              "ToolTip": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Model\\Entities\\Articulo.cs",
+              "RelativeToolTip": "SubastaWinForms\\Model\\Entities\\Articulo.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T19:38:17.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Subasta.cs",
+              "DocumentMoniker": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Model\\Entities\\Subasta.cs",
+              "RelativeDocumentMoniker": "SubastaWinForms\\Model\\Entities\\Subasta.cs",
+              "ToolTip": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Model\\Entities\\Subasta.cs",
+              "RelativeToolTip": "SubastaWinForms\\Model\\Entities\\Subasta.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAIwJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T19:34:21.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Subastador.cs",
+              "DocumentMoniker": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Model\\Entities\\Subastador.cs",
+              "RelativeDocumentMoniker": "SubastaWinForms\\Model\\Entities\\Subastador.cs",
+              "ToolTip": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Model\\Entities\\Subastador.cs",
+              "RelativeToolTip": "SubastaWinForms\\Model\\Entities\\Subastador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T19:33:45.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Postor.cs",
+              "DocumentMoniker": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Model\\Entities\\Postor.cs",
+              "RelativeDocumentMoniker": "SubastaWinForms\\Model\\Entities\\Postor.cs",
+              "ToolTip": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\Model\\Entities\\Postor.cs",
+              "RelativeToolTip": "SubastaWinForms\\Model\\Entities\\Postor.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvy0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T19:33:38.802Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
