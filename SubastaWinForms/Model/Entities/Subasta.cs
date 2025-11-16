@@ -12,7 +12,7 @@ namespace SubastaWinForms.Model.Entities
         int numeroSubasta;
         decimal pujaInicial; // precio base
         decimal montoActual; // monto actualizado luego de cada puja
-        decimal pujaDeAumento; 
+        decimal pujaDeAumento;
         DateTime fechaInicio; // fecha y hora de inicio
         TimeSpan duracion;
         Subastador subastador;
@@ -40,10 +40,12 @@ namespace SubastaWinForms.Model.Entities
             InicializarTimer();
         }
 
-        public string NombreSubastador => Subastador?.Nombre ?? "";
-        public string NombreArticulo => Articulo?.Name ?? "";
-
         //propiedades
+        public decimal Ganancia
+        {
+            get { return MontoActual - PujaInicial; }
+        }
+
         public int NumeroDeSubasta
         {
             get { return numeroSubasta; }
@@ -144,9 +146,14 @@ namespace SubastaWinForms.Model.Entities
             if (EstaFinalizada)
                 throw new InvalidOperationException("La subasta ya finalizó.");
 
+            // Si es la primera puja, arranca desde PujaInicial
+            if (MontoActual < PujaInicial)
+                MontoActual = PujaInicial;
+
             MontoActual += PujaDeAumento;
             Ganador = postor;
         }
+
 
         // esto es solo para agregar a la lista (atributo de Subasta) los que participan
         //if (!postores.Contains(postor))

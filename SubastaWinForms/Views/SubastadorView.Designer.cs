@@ -40,6 +40,7 @@
             btnIniciarSubasta = new Button();
             txtDuracion = new TextBox();
             lblSubastadorActivo = new Label();
+            QuitarSubastaBTN = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvSubastas).BeginInit();
             SuspendLayout();
             // 
@@ -57,7 +58,6 @@
             // dgvSubastas
             // 
             dgvSubastas.AllowUserToAddRows = false;
-            dgvSubastas.AllowUserToDeleteRows = false;
             dgvSubastas.AllowUserToResizeColumns = false;
             dgvSubastas.AllowUserToResizeRows = false;
             dgvSubastas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -67,7 +67,7 @@
             dgvSubastas.ReadOnly = true;
             dgvSubastas.RowHeadersWidth = 40;
             dgvSubastas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSubastas.Size = new Size(1418, 385);
+            dgvSubastas.Size = new Size(1418, 321);
             dgvSubastas.TabIndex = 100;
             dgvSubastas.VirtualMode = true;
             dgvSubastas.SelectionChanged += dgvSubastas_SelectionChanged;
@@ -164,11 +164,22 @@
             lblSubastadorActivo.Size = new Size(0, 37);
             lblSubastadorActivo.TabIndex = 101;
             // 
+            // QuitarSubastaBTN
+            // 
+            /*QuitarSubastaBTN.Location = new Point(12, 629);
+            QuitarSubastaBTN.Name = "QuitarSubastaBTN";
+            QuitarSubastaBTN.Size = new Size(118, 29);
+            QuitarSubastaBTN.TabIndex = 102;
+            QuitarSubastaBTN.Text = "Quitar subasta";
+            QuitarSubastaBTN.UseVisualStyleBackColor = true;
+            QuitarSubastaBTN.Click += QuitarSubastaBTN_Click;*/
+            // 
             // SubastadorView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1444, 699);
+            Controls.Add(QuitarSubastaBTN);
             Controls.Add(lblSubastadorActivo);
             Controls.Add(txtDuracion);
             Controls.Add(btnIniciarSubasta);
@@ -203,5 +214,6 @@
         private Button btnIniciarSubasta;
         private TextBox txtDuracion;
         private Label lblSubastadorActivo;
+        private Button QuitarSubastaBTN;
     }
 }

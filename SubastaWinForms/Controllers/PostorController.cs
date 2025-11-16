@@ -63,6 +63,7 @@ namespace SubastaWinForms.Controllers
         {
             return service.ModificarNombrePostor(id, nuevoNombre);
         }
+
         public bool ModificarEmailPostor(int id, string nuevoMail)
         {
             return service.ModificarEmailPostor(id, nuevoMail);

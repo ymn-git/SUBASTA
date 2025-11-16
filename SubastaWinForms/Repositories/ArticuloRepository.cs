@@ -83,17 +83,29 @@ namespace SubastaWinForms.Repositories
 
         public void Eliminar(int numeroArticulo)
         {
-            using (SqliteConnection conn = new SqliteConnection(connectionString))
+            try
             {
-                conn.Open();
-                string sql = "DELETE FROM Articulos WHERE NumeroArticulo=@id";
-                using (SqliteCommand cmd = new SqliteCommand(sql, conn))
+                using (SqliteConnection conn = new SqliteConnection(connectionString))
                 {
-                    cmd.Parameters.AddWithValue("@id", numeroArticulo);
-                    cmd.ExecuteNonQuery();
+                    conn.Open();
+                    string sql = "DELETE FROM Articulos WHERE NumeroArticulo=@id";
+                    using (SqliteCommand cmd = new SqliteCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", numeroArticulo);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                // Cartel de advertencia genérico
+                MessageBox.Show("No se puede eliminar el artículo porque está en uso o relacionado con una subasta activa.",
+                                "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Detalle técnico durante pruebas:
+                //MessageBox.Show($"Error: {ex.Message}");
+            }
         }
+
 
         public bool ActualizarNombre(Articulo articulo, string nuevoNombre)
         {

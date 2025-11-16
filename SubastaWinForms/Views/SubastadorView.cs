@@ -11,11 +11,14 @@ using SubastaWinForms.Controllers;
 using System.Timers;
 using SubastaWinForms.Model.Entities;
 using System.Collections;
+using SubastaWinForms.Repositories;
 
 namespace SubastaWinForms.Views
 {
+    
     public partial class SubastadorView : Form
     {
+
         private readonly SubastaController subastaController;
         public SubastadorView()
         {
@@ -32,7 +35,7 @@ namespace SubastaWinForms.Views
                 if (dgvSubastas.CurrentRow == null) return;
                 Subasta subasta = dgvSubastas.CurrentRow.DataBoundItem as Subasta;
                 if (subasta == null) return;
-                
+
             }
             catch (Exception ex)
             {
@@ -47,7 +50,7 @@ namespace SubastaWinForms.Views
             dgvSubastas.SelectionChanged -= dgvSubastas_SelectionChanged;
             dgvSubastas.ClearSelection();
 
-            List<Subasta> subastas = subastaController.ObtenerSubastas();
+            //subastas = subastaController.ObtenerSubastas();
 
             dgvSubastas.DataSource = null;
             dgvSubastas.AutoGenerateColumns = false;
@@ -76,6 +79,12 @@ namespace SubastaWinForms.Views
                 HeaderText = "Puja de Aumento",
                 DataPropertyName = "PujaDeAumento"
             });
+            dgvSubastas.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Ganancia",
+                DataPropertyName = "Ganancia" // usa la propiedad calculada
+            });
+
 
             dgvSubastas.Columns.Add(new DataGridViewTextBoxColumn
             {
@@ -89,7 +98,7 @@ namespace SubastaWinForms.Views
                 DataPropertyName = "Duracion"
             });
 
-           
+
             dgvSubastas.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Ganador",
@@ -108,7 +117,7 @@ namespace SubastaWinForms.Views
                 DataPropertyName = "TiempoRestante"
             });
 
-            dgvSubastas.DataSource = subastas;
+            dgvSubastas.DataSource = AppContext.SubastaController.ObtenerSubastas();
             dgvSubastas.SelectionChanged += dgvSubastas_SelectionChanged;
         }
 
@@ -198,7 +207,7 @@ namespace SubastaWinForms.Views
                         {
                             mensaje += $"\n\n🏆 Ganador: {subasta.Ganador.Nombre}" +
                                        $"\n💰 Monto final: {subasta.MontoActual}" +
-                                       $"\n $ Ganancia: {subasta.MontoActual - subasta.PujaInicial}" + 
+                                       $"\n $ Ganancia: {subasta.MontoActual - subasta.PujaInicial}" +
                                        $"\n📦 Artículo: {subasta.Articulo.Name}";
                         }
                         else
@@ -255,15 +264,38 @@ namespace SubastaWinForms.Views
                 MessageBox.Show("No se pudo crear la subasta. Verifique los datos ingresados.");
             }
         }
-
-
-
         private void SubastadorView_Load(object sender, EventArgs e)
         {
             ActualizarDgvSubastas(); // ← carga los datos
             lblSubastadorActivo.Text = $"Subastador: {AppContext.SubastadorActual?.Nombre}";
             lblSubastadorActivo.Visible = true;
 
+        }
+        /*private void OcultarSubasta()
+        {
+            if (dgvSubastas.CurrentRow != null)
+            {
+                subastas.Remove((Subasta)dgvSubastas.CurrentRow.DataBoundItem);
+                dgvSubastas.DataSource = null;
+                dgvSubastas.DataSource = subastas;
+            }
+                
+        }
+
+        private void QuitarSubastaBTN_Click(object sender, EventArgs e)
+        {
+            OcultarSubasta();
+        }*/
+        public static Subasta RevisarGanador(Postor actual)
+        {
+            foreach (var subasta in AppContext.SubastaController.ObtenerSubastas())
+            {
+                if (subasta.Ganador != null && subasta.Ganador.Id == actual.Id)
+                {
+                    return subasta; // devuelve la primera subasta donde el postor es ganador
+                }
+            }
+            return null; // si no ganó en ninguna
         }
 
     }

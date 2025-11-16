@@ -117,19 +117,29 @@ namespace SubastaWinForms.Repositories
             }
         }
 
-        public void EliminarPorId(int idSeleccionado)
+        public bool EliminarPorId(int idSeleccionado)
         {
-            using (var conn = new SqliteConnection(connectionString))
+            try
             {
-                conn.Open();
-                string sql = "DELETE FROM Postores WHERE Id=@id";
-                using (var cmd = new SqliteCommand(sql, conn))
+                using (var conn = new SqliteConnection(connectionString))
                 {
-                    cmd.Parameters.AddWithValue("@id", idSeleccionado);
-                    cmd.ExecuteNonQuery();
+                    conn.Open();
+                    string sql = "DELETE FROM Postores WHERE Id=@id";
+                    using (var cmd = new SqliteCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", idSeleccionado);
+                        return cmd.ExecuteNonQuery() > 0;
+                    }
                 }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("No se puede eliminar el Postor porque está participando en una subasta activa.",
+                                "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
         }
+
 
         public bool ActualizarNombre(Postor postor, string nuevoNombre)
         {

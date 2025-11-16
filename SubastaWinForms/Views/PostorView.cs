@@ -1,5 +1,6 @@
 using SubastaWinForms.Controllers;
 using SubastaWinForms.Model.Entities;
+using SubastaWinForms.Views;
 
 namespace SubastaWinForms
 {
@@ -10,7 +11,7 @@ namespace SubastaWinForms
         {
             InitializeComponent();
             postorController = AppContext.PostorController;
-            
+
         }
 
         private void btnPujar_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace SubastaWinForms
 
             if (postorController.Pujar(numeroSubasta, idPostor))
             {
-                
+
                 MessageBox.Show("Puja registrada correctamente.");
             }
             else
@@ -48,18 +49,80 @@ namespace SubastaWinForms
             dgvSubastas.DataSource = null;
             dgvSubastas.DataSource = AppContext.SubastaController.ObtenerSubastas();
         }
+
         private void MostrarVictoria(Postor postorGanador, Subasta subastaFinalizada)
         {
-            MessageBox.Show($"Felicitaciones {postorGanador} has ganado tu {subastaFinalizada.Articulo} la subasta número {subastaFinalizada.NumeroDeSubasta} \n" +
+            MessageBox.Show($"Felicitaciones {postorGanador.Nombre} has ganado tu {subastaFinalizada.Articulo} la subasta número {subastaFinalizada.NumeroDeSubasta} \n" +
                 $"El valor a pagar es {subastaFinalizada.MontoActual}\n");
+        }
+
+        public void RevisarGanador()
+        {
+            Postor actual = AppContext.PostorActual;
+            Subasta ganada = SubastadorView.RevisarGanador(actual);
+            if (ganada != null)
+            {
+                MostrarVictoria(actual, ganada);
+            }
+
         }
 
         private void PostorView_Load(object sender, EventArgs e)
         {
             lblPostorActivo.Text = $"Postor: {AppContext.PostorActual?.Nombre}";
-            lblPostorActivo.Visible = true ;
+            lblPostorActivo.Visible = true;
             ActualizardgvSubastas();
-            
+
+        }
+
+        private void modificarNombreTXT_Click(object sender, EventArgs e)
+        {
+            string nuevoNombre = nuevoNombreTXT.Text;
+            int idPostorActual = AppContext.PostorActual.Id;
+            bool resultado = postorController.ModificarNombrePostor(idPostorActual, nuevoNombre);
+
+            if (resultado)
+            {
+                MessageBox.Show("Cambio exitoso");
+                lblPostorActivo.Text = $"Postor: {nuevoNombre}";
+            }
+            else
+            {
+                MessageBox.Show("Intente de nuevo");
+            }
+        }
+
+        private void modificarEmailTXT_Click(object sender, EventArgs e)
+        {
+            string nuevoEmail = nuevoEmailTXT.Text;
+            int idPostorActual = AppContext.PostorActual.Id;
+            bool resultado = postorController.ModificarEmailPostor(idPostorActual, nuevoEmail);
+
+            if (resultado)
+            {
+                MessageBox.Show("Cambio exitoso");
+                lblPostorActivo.Text = $"Postor: {nuevoEmail}";
+            }
+            else
+            {
+                MessageBox.Show("Intente de nuevo");
+            }
+        }
+
+        private void eliminarBTN_Click(object sender, EventArgs e)
+        {
+            int postorPorEliminar = AppContext.PostorActual.Id;
+            bool resultado = postorController.EliminarPostor(postorPorEliminar);
+            if (resultado)
+            {
+                MessageBox.Show("Postor eliminado correctamente."); //falta evitar que se elimine si la subasta no finalizo 
+                AppContext.PostorActual = null; // limpiar referencia
+                ActualizardgvSubastas();        // refrescar grilla si corresponde
+            }
+            else
+            {
+                MessageBox.Show("No se pudo eliminar el postor.");
+            }
         }
 
 

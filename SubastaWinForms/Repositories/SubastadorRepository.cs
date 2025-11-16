@@ -114,15 +114,24 @@ namespace SubastaWinForms.Repositories
 
         public void Eliminar(int id)
         {
-            using (var conn = new SqliteConnection(connectionString))
+            try
             {
-                conn.Open();
-                string sql = "DELETE FROM Subastadores WHERE Id=@id";
-                using (var cmd = new SqliteCommand(sql, conn))
+                using (var conn = new SqliteConnection(connectionString))
+
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
-                    cmd.ExecuteNonQuery();
+                    conn.Open();
+                    string sql = "DELETE FROM Subastadores WHERE Id=@id";
+                    using (var cmd = new SqliteCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", id);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se puede eliminar el Subastador porque está en uso o relacionado con una subasta activa.",
+                                "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

@@ -362,11 +362,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\SubastaWinForms.csproj",
+      "projectUniqueName": "C:\\Users\\golfe\\OneDrive\\Escritorio\\repos\\SubastaWinForms\\SubastaWinForms\\SubastaWinForms.csproj",
       "projectName": "SubastaWinForms",
-      "projectPath": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\SubastaWinForms.csproj",
+      "projectPath": "C:\\Users\\golfe\\OneDrive\\Escritorio\\repos\\SubastaWinForms\\SubastaWinForms\\SubastaWinForms.csproj",
       "packagesPath": "C:\\Users\\golfe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\golfe\\source\\repos\\SubastaWinForms\\SubastaWinForms\\obj\\",
+      "outputPath": "C:\\Users\\golfe\\OneDrive\\Escritorio\\repos\\SubastaWinForms\\SubastaWinForms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

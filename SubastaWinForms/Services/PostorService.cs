@@ -46,8 +46,7 @@ namespace SubastaWinForms.Services
             if (existente == null)
                 return false;
 
-            repository.EliminarPorId(idSeleccionado);
-            return true;
+            return repository.EliminarPorId(idSeleccionado);
         }
 
 

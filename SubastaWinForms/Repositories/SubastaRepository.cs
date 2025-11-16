@@ -173,15 +173,23 @@ namespace SubastaWinForms.Repositories
 
         public void Eliminar(int numeroSubasta)
         {
-            using (var conn = new SqliteConnection(connectionString))
+            try
             {
-                conn.Open();
-                string sql = "DELETE FROM Subastas WHERE Id=@id";
-                using (var cmd = new SqliteCommand(sql, conn))
+                using (var conn = new SqliteConnection(connectionString))
                 {
-                    cmd.Parameters.AddWithValue("@id", numeroSubasta);
-                    cmd.ExecuteNonQuery();
+                    conn.Open();
+                    string sql = "DELETE FROM Subastas WHERE Id=@id";
+                    using (var cmd = new SqliteCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", numeroSubasta);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("No se puede eliminar la subasta de la base de datos desde aquí",
+                    "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

@@ -58,7 +58,7 @@ namespace SubastaWinForms.Views
 
                 if (yaRegistrado != null)
                 {
-                    if (yaRegistrado.Contrasena == contrasena)
+                    if (yaRegistrado.Contrasena == contrasena) //creo que contrasena es de AppContext.UsuarioActual.Contrasena
                     {
                         AppContext.PostorActual = yaRegistrado;
                         MessageBox.Show("Bienvenido postor.");
@@ -113,6 +113,7 @@ namespace SubastaWinForms.Views
                     if (nuevo != null)
                     {
                         AppContext.SubastadorActual = AppContext.SubastadorController.ObtenerSubastadorPorEmail(email);
+                        // quiero saber si es equivalente a AppContext.SubastadorActual = nuevo
                         MessageBox.Show("Subastador registrado correctamente.");
                     }
                     else
