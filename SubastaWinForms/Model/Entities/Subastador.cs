@@ -9,6 +9,8 @@ namespace SubastaWinForms.Model.Entities
     public class Subastador : Usuario
     {
         private int id;
+        public Subastador()
+        { }
 
         public Subastador(string nombre, string email, string contrasena)
             : base(nombre, email, contrasena)

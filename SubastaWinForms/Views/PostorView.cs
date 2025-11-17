@@ -115,9 +115,9 @@ namespace SubastaWinForms
             bool resultado = postorController.EliminarPostor(postorPorEliminar);
             if (resultado)
             {
-                MessageBox.Show("Postor eliminado correctamente."); //falta evitar que se elimine si la subasta no finalizo 
-                AppContext.PostorActual = null; // limpiar referencia
-                ActualizardgvSubastas();        // refrescar grilla si corresponde
+                MessageBox.Show("Postor eliminado correctamente."); 
+                AppContext.PostorActual = null; 
+                ActualizardgvSubastas();        
             }
             else
             {

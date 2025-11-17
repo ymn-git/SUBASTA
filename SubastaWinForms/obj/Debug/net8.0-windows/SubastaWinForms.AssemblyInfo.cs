@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SubastaWinForms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e683044139f60d848ab27fcd8d04f040322aac9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38801a7475b02893df1e37450ea22d21f0db54bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("SubastaWinForms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SubastaWinForms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

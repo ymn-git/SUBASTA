@@ -37,12 +37,20 @@ namespace SubastaWinForms.Controllers
             return ok ? subastador : null;
         }
 
-
+        public bool ModificarNombreSubastador(int id, string nuevoNombre)
+        {
+            return service.ModificarNombreSubastador(id, nuevoNombre);
+        }
+        public bool ModificarEmailSubastador(int id, string nuevoMail)
+        {
+            return service.ModificarEmailSubastador(id, nuevoMail);
+        }
 
         public bool EliminarSubastador(int id)
         {
             return service.Eliminar(id);
         }
+
 
         /*public bool ModificarSubastador(string email, string nombre)
         {

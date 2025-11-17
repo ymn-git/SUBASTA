@@ -112,43 +112,61 @@ namespace SubastaWinForms.Repositories
         }
 
 
-        public void Eliminar(int id)
+        public bool EliminarPorId(int id)
         {
             try
             {
                 using (var conn = new SqliteConnection(connectionString))
-
                 {
                     conn.Open();
                     string sql = "DELETE FROM Subastadores WHERE Id=@id";
                     using (var cmd = new SqliteCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@id", id);
-                        cmd.ExecuteNonQuery();
+                        return cmd.ExecuteNonQuery() > 0;
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("No se puede eliminar el Subastador porque está en uso o relacionado con una subasta activa.",
                                 "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
         }
 
-        public void ModificarSubastador(Subastador subastador)
+
+
+        public bool ActualizarNombre(Subastador subastador, string nuevoNombre)
         {
             using (var conn = new SqliteConnection(connectionString))
             {
                 conn.Open();
-                string sql = "UPDATE Subastadores SET Nombre=@n WHERE Email=@e";
+                string sql = "UPDATE Subastadores SET Nombre=@n WHERE Id=@id";
                 using (var cmd = new SqliteCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@n", subastador.Nombre);
-                    cmd.Parameters.AddWithValue("@e", subastador.Email);
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@n", nuevoNombre);
+                    cmd.Parameters.AddWithValue("@id", subastador.Id);
+                    return cmd.ExecuteNonQuery() > 0;
                 }
             }
         }
+        public bool ActualizarEmail(Subastador subastador, string nuevoEmail)
+{
+    using (var conn = new SqliteConnection(connectionString))
+    {
+        conn.Open();
+        string sql = "UPDATE Subastadores SET Email=@e WHERE Id=@id";
+        using (var cmd = new SqliteCommand(sql, conn))
+        {
+            cmd.Parameters.AddWithValue("@e", nuevoEmail);
+            cmd.Parameters.AddWithValue("@id", subastador.Id);
+            return cmd.ExecuteNonQuery() > 0;
+        }
+    }
+}
+
+
     }
 }
 

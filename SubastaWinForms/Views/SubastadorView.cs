@@ -15,18 +15,20 @@ using SubastaWinForms.Repositories;
 
 namespace SubastaWinForms.Views
 {
-    
+
     public partial class SubastadorView : Form
     {
 
         private readonly SubastaController subastaController;
+        private readonly SubastadorController subastadorController;
         public SubastadorView()
         {
-
             InitializeComponent();
             subastaController = AppContext.SubastaController;
+            subastadorController = AppContext.SubastadorController; // 👈 faltaba esto
             dgvSubastas.AutoGenerateColumns = false;
         }
+
         //--------------------------------------------------------------------------------------------------------
         private void dgvSubastas_SelectionChanged(object sender, EventArgs e)
         {
@@ -296,6 +298,55 @@ namespace SubastaWinForms.Views
                 }
             }
             return null; // si no ganó en ninguna
+        }
+
+        private void btnModificarNombre_Click(object sender, EventArgs e)
+        {
+            string nuevoNombre = txtEditarNombre.Text;
+            int idSubastadorActual = AppContext.SubastadorActual.Id;
+            bool resultado = subastadorController.ModificarNombreSubastador(idSubastadorActual, nuevoNombre);
+
+            if (resultado)
+            {
+                MessageBox.Show("Cambio exitoso");
+                lblSubastadorActivo.Text = $"Subastador: {nuevoNombre}";
+            }
+            else
+            {
+                MessageBox.Show("Intente de nuevo");
+            }
+        }
+
+        private void btnModificarEmail_Click(object sender, EventArgs e)
+        {
+            string nuevoEmail = txtEditarEmail.Text;
+            int idSubastadorActual = AppContext.SubastadorActual.Id;
+            bool resultado = subastadorController.ModificarEmailSubastador(idSubastadorActual, nuevoEmail);
+
+            if (resultado)
+            {
+                MessageBox.Show("Cambio exitoso");
+            }
+            else
+            {
+                MessageBox.Show("Intente de nuevo");
+            }
+        }
+
+        private void btnEliminarSubastador_Click(object sender, EventArgs e)
+        {
+            int subastadorPorEliminar = AppContext.SubastadorActual.Id;
+            bool resultado = subastadorController.EliminarSubastador(subastadorPorEliminar);
+            if (resultado)
+            {
+                MessageBox.Show("Subastador eliminado correctamente.");
+                AppContext.SubastadorActual = null; 
+                           
+            }
+            else
+            {
+                MessageBox.Show("No se pudo eliminar el subastador.");
+            }
         }
 
     }

@@ -45,7 +45,7 @@
             btnPostorView.Location = new Point(239, 409);
             btnPostorView.Name = "btnPostorView";
             btnPostorView.Size = new Size(136, 29);
-            btnPostorView.TabIndex = 6;
+            btnPostorView.TabIndex = 7;
             btnPostorView.Text = "Acceso postores";
             btnPostorView.UseVisualStyleBackColor = true;
             btnPostorView.Click += PostorView_Click;
@@ -56,7 +56,7 @@
             btnSubastadorView.Location = new Point(402, 408);
             btnSubastadorView.Name = "btnSubastadorView";
             btnSubastadorView.Size = new Size(155, 31);
-            btnSubastadorView.TabIndex = 7;
+            btnSubastadorView.TabIndex = 8;
             btnSubastadorView.Text = "Acceso subastadores";
             btnSubastadorView.UseVisualStyleBackColor = true;
             btnSubastadorView.Click += subastadorView_Click;
@@ -68,7 +68,7 @@
             IngresarNombreTXT.Name = "IngresarNombreTXT";
             IngresarNombreTXT.PlaceholderText = "Nombre";
             IngresarNombreTXT.Size = new Size(125, 27);
-            IngresarNombreTXT.TabIndex = 1;
+            IngresarNombreTXT.TabIndex = 3;
             // 
             // IngresarEmailTXT
             // 
@@ -78,14 +78,14 @@
             IngresarEmailTXT.Name = "IngresarEmailTXT";
             IngresarEmailTXT.PlaceholderText = "Email";
             IngresarEmailTXT.Size = new Size(125, 27);
-            IngresarEmailTXT.TabIndex = 2;
+            IngresarEmailTXT.TabIndex = 4;
             // 
             // Aceptar
             // 
             Aceptar.Location = new Point(344, 334);
             Aceptar.Name = "Aceptar";
             Aceptar.Size = new Size(94, 29);
-            Aceptar.TabIndex = 5;
+            Aceptar.TabIndex = 6;
             Aceptar.Text = "Aceptar";
             Aceptar.UseVisualStyleBackColor = true;
             Aceptar.Click += Aceptar_Click;
@@ -97,7 +97,7 @@
             rbPostor.Location = new Point(318, 73);
             rbPostor.Name = "rbPostor";
             rbPostor.Size = new Size(171, 24);
-            rbPostor.TabIndex = 3;
+            rbPostor.TabIndex = 1;
             rbPostor.TabStop = true;
             rbPostor.Text = "Acceder como Postor";
             rbPostor.UseVisualStyleBackColor = true;
@@ -109,7 +109,7 @@
             rbSubastador.Location = new Point(318, 103);
             rbSubastador.Name = "rbSubastador";
             rbSubastador.Size = new Size(205, 24);
-            rbSubastador.TabIndex = 4;
+            rbSubastador.TabIndex = 2;
             rbSubastador.TabStop = true;
             rbSubastador.Text = "Acceder como Subastador";
             rbSubastador.UseVisualStyleBackColor = true;
@@ -132,7 +132,7 @@
             IngresarContrasenaTXT.Name = "IngresarContrasenaTXT";
             IngresarContrasenaTXT.PlaceholderText = "Contrasena";
             IngresarContrasenaTXT.Size = new Size(125, 27);
-            IngresarContrasenaTXT.TabIndex = 100;
+            IngresarContrasenaTXT.TabIndex = 5;
             // 
             // TestView
             // 

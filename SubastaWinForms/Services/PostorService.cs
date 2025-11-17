@@ -76,7 +76,7 @@ namespace SubastaWinForms.Services
             if (postor == null) return false;
 
             if (string.IsNullOrWhiteSpace(nuevoEmail))
-                throw new ArgumentException("El nombre no puede estar vacío.");
+                throw new ArgumentException("El email no puede estar vacío.");
 
             return repository.ActualizarEmail(postor, nuevoEmail);
         }

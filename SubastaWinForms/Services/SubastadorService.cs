@@ -43,19 +43,30 @@ namespace SubastaWinForms.Services
             Subastador existente = repository.ObtenerPorId(id);
             if (existente == null)
             { return false; }
-            repository.Eliminar(id);
+            repository.EliminarPorId(id);
             return true;
         }
 
-        public bool ModificarSubastador(Subastador subastador)
+
+        public bool ModificarNombreSubastador(int id, string nuevoNombre)
         {
-            Subastador existente = repository.ObtenerPorId(subastador.Id);
-            if (existente == null)
-            {
-                return false;
-            }
-            repository.ModificarSubastador(subastador);
-            return true;
+            var subastador = repository.ObtenerPorId(id);
+            if (subastador == null) return false;
+
+            if (string.IsNullOrWhiteSpace(nuevoNombre))
+                throw new ArgumentException("El nombre no puede estar vacío.");
+
+            return repository.ActualizarNombre(subastador, nuevoNombre);
+        }
+        public bool ModificarEmailSubastador(int id, string nuevoEmail)
+        {
+            var subastador = repository.ObtenerPorId(id);
+            if (subastador == null) return false;
+
+            if (string.IsNullOrWhiteSpace(nuevoEmail))
+                throw new ArgumentException("El email no puede estar vacío.");
+
+            return repository.ActualizarEmail(subastador, nuevoEmail);
         }
     }
 }
